@@ -1,7 +1,7 @@
 name: month_calculator
 description: Calculates the number of days and months in a givin dateTimeRange.
 version: 0.1.0
-# homepage:
+repository: https://github.com/Keatr0n/month_calculater
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
