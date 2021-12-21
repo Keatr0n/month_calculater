@@ -29,16 +29,25 @@ class MonthCalculator {
     while (true) {
       months++;
       if (currentDate.month < 12) {
-        int daysLeftAfterSubtraction = daysLeft - DateTime(currentDate.year, currentDate.month + 1, 1).subtract(const Duration(days: 1)).day;
+        int daysLeftAfterSubtraction = daysLeft -
+            DateTime(currentDate.year, currentDate.month + 1, 1)
+                .subtract(const Duration(days: 1))
+                .day;
 
-        if (currentDate.month == 2 && _isLeapYear(currentDate.year)) daysLeftAfterSubtraction--;
-        if (daysLeftAfterSubtraction < 0) return DayMonthCount(daysLeft, months);
+        if (currentDate.month == 2 && _isLeapYear(currentDate.year)) {
+          daysLeftAfterSubtraction--;
+        }
+        if (daysLeftAfterSubtraction < 0) {
+          return DayMonthCount(daysLeft, months);
+        }
 
         daysLeft = daysLeftAfterSubtraction;
         currentDate = DateTime(currentDate.year, currentDate.month + 1, 1);
       } else {
         int daysLeftAfterSubtraction = daysLeft - 31;
-        if (daysLeftAfterSubtraction < 0) return DayMonthCount(daysLeft, months);
+        if (daysLeftAfterSubtraction < 0) {
+          return DayMonthCount(daysLeft, months);
+        }
         // this is december so we already know all the numbers
         currentDate = DateTime(currentDate.year + 1, 1);
         daysLeft -= 31;
