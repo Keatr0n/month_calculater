@@ -2,11 +2,15 @@ library month_calculator;
 
 import 'package:flutter/material.dart';
 
+/// internal function to check leap years
 bool _isLeapYear(int year) {
   if (year % 100 == 0) return year % 400 == 0;
   return year % 4 == 0;
 }
 
+/// Holds the months and days in a dateTimeRange.
+/// 
+/// Returned by MonthCalculator.monthsInRange
 class DayMonthCount {
   final int months;
   final int days;
@@ -19,6 +23,16 @@ class DayMonthCount {
   }
 }
 
+/// ## MonthCalculator
+/// 
+/// Calculates the number of months and days in a givin dateTimeRange.
+/// 
+/// Used like this:
+/// ```dart
+/// MonthCalculator.monthsInRange(DateTimeRange(start: startDate, end: endDate));
+/// ```
+/// 
+/// This makes it really easy to calculate the number of months and days in a date range while accounting for leap years and uneven months.
 class MonthCalculator {
   /// Returns the number of days and months in a givin dateTimeRange.
   static DayMonthCount monthsInRange(DateTimeRange range) {

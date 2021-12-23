@@ -1,3 +1,6 @@
+## 0.1.3
+
+Added more documentation 
 ## 0.1.2
 
 Added an example
