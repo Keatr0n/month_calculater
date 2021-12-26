@@ -9,7 +9,7 @@ bool _isLeapYear(int year) {
 }
 
 /// Holds the months and days in a dateTimeRange.
-/// 
+///
 /// Returned by MonthCalculator.monthsInRange
 class DayMonthCount {
   final int months;
@@ -24,14 +24,14 @@ class DayMonthCount {
 }
 
 /// ## MonthCalculator
-/// 
+///
 /// Calculates the number of months and days in a givin dateTimeRange.
-/// 
+///
 /// Used like this:
 /// ```dart
 /// MonthCalculator.monthsInRange(DateTimeRange(start: startDate, end: endDate));
 /// ```
-/// 
+///
 /// This makes it really easy to calculate the number of months and days in a date range while accounting for leap years and uneven months.
 class MonthCalculator {
   /// Returns the number of days and months in a givin dateTimeRange.

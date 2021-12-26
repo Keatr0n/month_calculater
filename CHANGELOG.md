@@ -1,3 +1,6 @@
+## 0.1.4
+
+Formatted code
 ## 0.1.3
 
 Added more documentation 
